@@ -75,7 +75,7 @@ a {
   color: var(--white-color);
   border: none;
   padding: 0.7rem;
-  font-size: 1.7rem;
+  font-size: 1rem;
   border-radius: 0.25rem;
   cursor: pointer;
 }
@@ -86,6 +86,22 @@ a {
 /* ----------- Header Classes start ---------------------*/
 header {
   padding: 0.8rem 0;
+  /* background-color: var(--primary-color); */
+
+  /* This position property used to shift the slider imgs inside the nav with main class - if we don't use this style there is no impact on styling 
+  only diff here is the hero images will start after the end of nav/header
+  */
+  /* position: absolute; */
+  /* For fix heaer remove position as absolute and add position as fixed */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 6;
+  width: 100%;
+}
+
+/* Sticky header functionality has been added in js file */
+header.sticky {
   background-color: var(--primary-color);
 }
 
@@ -112,9 +128,10 @@ nav ul li {
 
 nav ul li a {
   color: var(--white-color);
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
+/*Horizontal animated line below the main navigation style on hover*/
 nav ul li::before {
   content: "";
   position: absolute;
@@ -132,4 +149,211 @@ nav ul li:hover::before {
   width: 100%;
 }
 
+/* Responsive button menu class */
+.btn {
+  font-size: 1.3rem;
+  color: var(--white-color);
+  cursor: pointer;
+  display: none;
+}
+
 /* ----------- Header Classes ends ---------------------*/
+
+/*------------ Hero classes starts----------------------*/
+.main {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.swiper {
+  height: 100vh;
+}
+
+.slider-container {
+  width: 100%;
+}
+
+.slider-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+  width: 100%;
+  text-align: center;
+  font-family: 'ubuntu';
+  /* use this to center the element */
+  transform: translate(-50%, -50%);
+}
+
+.img-overlay p {
+  font-size: 1rem;
+  letter-spacing: 0.5rem;
+  color: var(--white-color);
+  animation: animateHeroText 4s forwards;
+}
+
+.img-overlay h2 {
+  font-size: 5rem;
+  letter-spacing: 0.5rem;
+  color: var(--white-color);
+  text-transform: uppercase;
+  animation: animateHeroText 4s forwards;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Style for Discover text of slider images */
+.img-overlay h2 span {
+  color: transparent;
+  -webkit-text-stroke: 1px var(--white-color);
+}
+
+.overlay {
+  position: relative;
+}
+
+.overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Hero text animation */
+@keyframes animateHeroText {
+  0% {
+    transform: translate(-50%);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.2;
+  }
+
+  70% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-0%);
+  }
+}
+
+/*------------ Hero classes ends----------------------*/
+
+/*------------ Location search start----------------------*/
+#location-search {
+  transform: translateY(-120%);
+  position: absolute;
+  z-index: 100;
+  width: 100%;
+}
+
+.form-wrapper {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-control {
+  width: 100%;
+}
+
+form input,
+select {
+  padding: 0.5rem;
+  outline: none;
+  font-size: 1rem;
+  color: black;
+  border-radius: 4px;
+  border: 1px solid var(--light-gray-color);
+  margin: 0 0.4rem;
+}
+
+/*------------ Location search end----------------------*/
+
+
+/*------------ About start----------------------*/
+.about-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 4rem;
+  margin: 4rem 0;
+}
+
+.about-wrapper h2 span {
+  color: var(--primary-color);
+  font-family: 'ubuntu';
+}
+
+.about-wrapper ul {
+  list-style: none;
+}
+
+.about-wrapper ul .icons {
+  display: flex;
+  align-items: center;
+  margin: 0.8rem 0;
+}
+
+.about-wrapper ul .icons i {
+  background: var(--primary-color);
+  padding: 0.8rem;
+  border-radius: 50%;
+  color: var(--white-color);
+}
+
+.about-wrapper ul p {
+  margin-left: 1rem;
+}
+
+.agency-right-side .img {
+  position: relative;
+}
+
+.agency-right-side .img img {
+  width: 75%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+  transition: 0.5s ease-in;
+}
+
+/* Style for bottom image of about section */
+.agency-right-side .img::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 45px;
+  bottom: 0;
+  right: 0;
+  background: var(--primary-color);
+  height: 100%;
+  width: 70%;
+  z-index: -2;
+}
+
+.agency-right-side .img img:hover {
+  transform: scale(0.95);
+}
+
+/*------------ About end----------------------*/

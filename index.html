@@ -22,6 +22,9 @@
           <img src="/img/logoipsum-227.svg" alt="Primary_logo">
         </div>
         <ul>
+          <div class="btn">
+            <i class="fas fa-times close-btn"></i>
+          </div>
           <li><a href="#">Home</a></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Tours</a></li>
@@ -29,14 +32,125 @@
           <li><a href="#">Gallary</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
+        <div class="btn">
+          <i class="fas fa-bars menu-btn"></i>
+        </div>
       </nav>
     </div>
   </header>
-  <!-- ================ Header starts =============== -->
+  <!-- ================ Header end =============== -->
 
+  <!-- ================ Hero section starts ============ -->
+  <main>
+    <div class="slider-container swiper">
+      <div class="slide-content swiper-wrapper">
+        <div class="overlay swiper-slide">
+          <img src="./img/slide-3.jpg" alt="">
+          <div class="img-overlay">
+            <p>Let's travel the world with us</p>
+            <h2><span>Discover</span> the world</h2>
+            <h2>with our guide</h2>
+          </div>
+        </div>
+        <div class="overlay swiper-slide">
+          <img src="./img/slide-2.jpg" alt="">
+          <div class="img-overlay">
+            <p>Let's travel the world with us</p>
+            <h2><span>Discover</span> the world</h2>
+            <h2>with our guide</h2>
+          </div>
+        </div>
+        <div class="overlay swiper-slide">
+          <img src="./img/slide-1.jpg" alt="">
+          <div class="img-overlay">
+            <p>Let's travel the world with us</p>
+            <h2><span>Discover</span> the world</h2>
+            <h2>with our guide</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- =============== Hero section ends================ -->
+
+  <!-- ================ Location search starts ============ -->
+  <section id="location-search">
+    <div class="container">
+      <div class="form-wrapper">
+        <form action="#">
+          <input type="text" placeholder="Where to?" class="form-control">
+          <select name="destination" class="form-control">
+            <option value="destination">Destinations</option>
+            <option value="shimla">Shimla</option>
+            <option value="otty">Otty</option>
+            <option value="maldiv">Maldiv</option>
+            <option value="paris">Paris</option>
+            <option value="newyork">New York</option>
+          </select>
+          <select name="durantion" class="form-control">
+            <option value="durantion">Durantion</option>
+            <option value="shimla">1 Day Tour</option>
+            <option value="otty">2-4 Days</option>
+            <option value="maldiv">5-7 Days</option>
+            <option value="paris">7+ Days</option>
+          </select>
+          <button type="button" class="primary-btn">Search Now</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- ================ Location search ends ============ -->
+
+  <!-- =============== About starts ===================== -->
+  <section id="about">
+    <div class="container">
+      <div class="about-wrapper">
+        <div class="agency-left-side">
+          <p class="heading-normal-txt">THE BEST TRAVEL AGENCY</p>
+          <h2 class="headings">DISCOVER THE <span>WORLD</span> WITH OUR GUIDE </h2>
+          <p class="lead">
+            You can choose any country with good tourism. Agency elementum sesus the Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Cupiditate, fugiat unde voluptate qui quam quibusdam, blanditiis a, ad
+            repellendus adipisci ea doloremque voluptates officia. Ab non fugit beatae vero quisquam?
+          </p>
+          <p class="lead">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad praesentium eaque esse nihil. Omnis culpa
+            architecto et. Nostrum, quae placeat nulla tenetur molestiae fuga aut blanditiis sed inventore, repudiandae
+            quas.
+          </p>
+          <ul>
+            <li>
+              <div class="icons">
+                <i class="fa fa-check"></i>
+                <p>20 years of Experience</p>
+              </div>
+            </li>
+            <li>
+              <div class="icons">
+                <i class="fa fa-check"></i>
+                <p>150 Tour destinations</p>
+              </div>
+            </li>
+            <li>
+              <div class="icons">
+                <i class="fa fa-phone-volume"></i>
+                <p>99 4444 6666</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="agency-right-side">
+          <div class="img">
+            <img src="img/about-2.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- =============== About ends ===================== -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="/js/script.js"></script>
   <script src="js/swiper.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 
 </html>
